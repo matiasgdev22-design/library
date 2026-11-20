@@ -5,15 +5,17 @@ const myLibrary = [];
 
 //información del libro.
 
-function Book(title, author, pages, category, status = "pending", cover = "", notes = "") {
-  this.id = crypto.randomUUID();
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.category = category;
-  this.status = status;
-  this.cover = cover;
-  this.notes = notes;
+class Book {
+  constructor(title, author, pages, category, status = "pending", cover = "", notes = "") {
+    this.id = crypto.randomUUID();
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.category = category;
+    this.status = status;
+    this.cover = cover;
+    this.notes = notes;
+  }
 }
 function addBookToLibrary(book) {
   myLibrary.push(book);
